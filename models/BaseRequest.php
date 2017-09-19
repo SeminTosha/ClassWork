@@ -18,7 +18,7 @@ class BaseRequest
     }
 
     public function add_new(){
-        mysqli_request($this->connection, "INSERT INTO `articles` (`articles`,`title`,`time`) VALUES ('".$_POST['text']."','". $_POST['title']."','".$_POST['time']."')");
 
+        mysqli_query($this->connection, "INSERT INTO `articles` (`article`,`title`,`time`) VALUES ('".$_POST['text']."','". $_POST['title']."','".$_POST['time']."')");
     }
 }
